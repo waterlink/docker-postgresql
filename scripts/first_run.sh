@@ -23,14 +23,8 @@ pre_start_action() {
 
 post_start_action() {
   echo "Creating the superuser: $USER"
-  echo "bga"
 
-    #DROP ROLE IF EXISTS $USER;
-  su postgres -c "psql -e <<-EOF
-    CREATE ROLE $USER WITH ENCRYPTED PASSWORD '$PASS';
-    ALTER ROLE $USER WITH SUPERUSER;
-    ALTER ROLE $USER WITH LOGIN;
-EOF"
+  su postgres -c "psql -e -c 'create role $USER superuser createdb createrole inherit login with encrypted password $PASS'"
 
   rm /firstrun
 }

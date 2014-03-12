@@ -1,7 +1,7 @@
 # Postgresql (http://www.postgresql.org/)
 
-FROM ubuntu:precise
-MAINTAINER Ryan Seto <ryanseto@yak.net>
+FROM ubuntu:saucy
+MAINTAINER Alex Fedorov <waterlink000@gmail.com>, Ryan Seto <ryanseto@yak.net>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 

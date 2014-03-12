@@ -14,7 +14,7 @@ ENV LC_ALL     en_US.UTF-8
 # Install the latest postgresql
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
     apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes postgresql-9.3 && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes postgresql-9.3 postgresql-contrib-9.3 && \
     /etc/init.d/postgresql stop
 
 # Install other tools.

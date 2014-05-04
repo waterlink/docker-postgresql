@@ -3,7 +3,7 @@
 FROM ubuntu:saucy
 MAINTAINER Alex Fedorov <waterlink000@gmail.com>, Ryan Seto <ryanseto@yak.net>
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu saucy main universe" > /etc/apt/sources.list
 
 ENV APT_PG_KEY ACCC4CF8
 
